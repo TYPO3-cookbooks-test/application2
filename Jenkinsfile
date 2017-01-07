@@ -1,3 +1,4 @@
+@NonCPS printCauses() {
 def causes = currentBuild.rawBuild.getCauses()
 
 try {
@@ -8,7 +9,8 @@ try {
   println "Exception: ${e}"
   e.printStackTrace()
 }
-
+}
+printCauses()
 
 
 def pipe = new org.typo3.chefci.v1.Pipeline()
